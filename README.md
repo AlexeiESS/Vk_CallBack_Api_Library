@@ -41,7 +41,9 @@ protected function mysql_connect(){
 		return 1;
 	}
 ```
+
 <p>В конечном итоге мы должны получить следующий класс:</p>
+
 ```php
 <?php
 namespace Actions;
