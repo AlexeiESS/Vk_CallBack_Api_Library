@@ -21,7 +21,7 @@ class Example extends Query {
 	function __construct($token,$data){
 		$this->data = $data;
 		$this->token = $token;
-    $this->query_to_api();
+   		$this->query_to_api();
 	}
 
 }
@@ -36,10 +36,10 @@ class Example extends Query {
 ```php
 <?php
 protected function mysql_connect(){
-		require_once 'Configs/mysql_cfg.php';
-		$this->conn = new Mysql($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_name']);
-		return 1;
-	}
+	require_once 'Configs/mysql_cfg.php';
+	$this->conn = new Mysql($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_name']);
+	return 1;
+}
 ```
 
 <p>В конечном итоге мы должны получить следующий класс:</p>
@@ -63,7 +63,7 @@ class Likeadd extends Query {
 		$this->data = $data;
 		$this->token = $token;
 		$this->mysql_connect();
-    $this->query_to_api();
+   		$this->query_to_api();
 	}
 	protected function mysql_connect(){
 		require_once 'Configs/mysql_cfg.php';
@@ -96,23 +96,24 @@ class Likeadd extends Query {
 		$this->data = $data;
 		$this->token = $token;
     
-    //Подключаемся к БД
+    		//Подключаемся к БД
 		$this->mysql_connect();
     
-    //Тут выполняется запрос к БД
-    $this->example();
+    		//Тут выполняется запрос к БД
+   		 $this->example();
     
-    //Отправляем запрос на Api Вконтакте и выводим статус 200 (ok)
-    $this->query_to_api();
+   		 //Отправляем запрос на Api Вконтакте и выводим статус 200 (ok)
+  		  $this->query_to_api();
 	}
 	protected function mysql_connect(){
 		require_once 'Configs/mysql_cfg.php';
 		$this->conn = new Mysql($config['db_host'], $config['db_user'], $config['db_pass'], $config['db_name']);
 		return 1;
 	}
-  protected function example(){
-    $this->conn->query("UPDATE users SET password = '123' WEHRE id = 1;");
-  }
+  	protected function example(){
+    		$this->conn->query("UPDATE users SET password = '123' WEHRE id = 1;");
+		return 1;
+  	}
 }
 ```
 
