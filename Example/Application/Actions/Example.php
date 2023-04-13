@@ -12,6 +12,7 @@ class Example extends Query {
 	function __construct($token,$data){
 		$this->data = $data;
 		$this->token = $token;
+		$this->query_to_api();
 	}
 
 }

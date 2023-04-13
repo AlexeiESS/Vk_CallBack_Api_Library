@@ -16,7 +16,7 @@ class Likeadd extends Query {
 		$this->data = $data;
 		$this->token = $token;
 		$this->mysql_connect();
-
+		$this->query_to_api();
 	}
 	protected function mysql_connect(){
 		require_once 'Configs/mysql_cfg.php';
