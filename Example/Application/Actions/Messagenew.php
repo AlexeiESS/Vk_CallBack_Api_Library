@@ -4,7 +4,7 @@ namespace Actions;
 use Core\Query;
 
 
-class Wallrepost extends Query {
+class Messagenew extends Query {
 
 	protected $token = '';
 	protected $data = [];
